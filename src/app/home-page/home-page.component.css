@@ -9,7 +9,7 @@
 }
 #homepage-banner{
   background: black;
-  height: 85%;
+  height: 95%;
   width: 70%;
   animation: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 slideInFromTop;
   margin: 0 auto 0 auto;
@@ -17,13 +17,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 6px white solid;
+  border-top: 0;
+  transform: translateY(-10%);
 }
 @keyframes slideInFromTop {
   0% {
     transform: translatey(-100%);
   }
   100% {
-    transform: translatey(0%);
+    transform: translatey(-10%);
   }
 }
 #logo-text{
@@ -32,18 +35,10 @@
   margin-bottom: 5%;
   animation: navFadeIn 2s;
 }
-#banner-cover-up{
-  width: 70%;
-  height: 10%;
-  position: absolute;
-  background-color: black;
-  margin: 0 15% 0 15%;
-}
 #homepage-nav{
   height: 25%;
-  border: 2px white solid;
   border-radius: 10px;
-  margin: 0 17% 0 17%;
+  margin: 2% 17% 0 17%;
   display: flex;
   animation: navFadeIn 2.75s;
 }
@@ -65,9 +60,8 @@
   width: 33%;
   margin: 5% 0 2% 0;
 }
-.homepage-nav-button:hover {
-  height: 105%;
-}
+.homepage-nav-button { transition: all .2s ease-in-out; }
+.homepage-nav-button:hover { transform: scale(1.2); }
 .homepage-nav-text{
   color: white;
   text-align: center;

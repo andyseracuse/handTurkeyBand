@@ -1,0 +1,172 @@
+.page-wrapper{
+  position: absolute;
+  top: 155.19px;
+  width: 100%;
+}
+
+.date{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+  justify-content: center;
+}
+
+.description{
+  width: 50%;
+}
+
+h2{
+  line-height: 2.5;
+}
+
+hr{
+  margin: 0;
+}
+
+.col{
+  display: flex;
+  justify-content: center;
+}
+.booking-info {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 25px;
+  padding: 5% 50px 5% 50px;
+  background: gainsboro;
+}
+.rep-container{
+  background: gainsboro;
+  padding: 10px;
+}
+
+.rep-container .row{
+  height: 50px;
+}
+
+.song{
+  align-items: center;
+}
+
+p{
+  margin: 0;
+}
+
+.great-title {
+  font-weight: 900;
+  font-size: 50px;
+  margin: 40px 0 40px 70px;
+}
+
+.vl {
+  border-left: 3px solid black;
+  margin-left: -3px;
+  margin-right: 15px;
+}
+
+.event-day-time{
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.event-location{
+  font-size: 15px;
+  margin-top: 5px
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.output{
+  margin-top: 40px
+}
+
+.day{
+  font-weight: bold;
+  font-size: 60px;
+  height: 40px;
+}
+
+.month{
+  font-size: 35px;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+}
+
+[role=tab] {
+  width: 100%;
+}
+
+.tab-content {
+  margin-top: 0;
+}
+
+.great-title{
+  text-align: center;
+}
+
+.great-image {
+  width: 100%;
+}
+
+.great-col {
+  text-align: center;
+}
+
+.info-container{
+  padding-right: 3%;
+}
+
+.nav-item{
+  width: 33.33%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.event{
+  display: flex;
+  margin: 7% 10% 0 20%;
+}
+
+.info-container{
+  margin-top: -10px;
+}
+
+.nav-tabs{
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.divider {
+  display: none;
+}
+
+@media only screen and (max-width: 830px){
+  .page-wrapper{
+    top: 200px;
+  }
+  .event {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+  }
+  .description {
+    width: 100%
+  }
+  .divider {
+    display: block
+  }
+  .description {
+    display: none;
+  }
+  .event {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,57 @@
+.media-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-wrapper {
+  position: absolute;
+  top: 156px;
+  width: 100%;
+}
+
+.nav-item{
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-tabs{
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+[role=tab] {
+  width: 100%;
+}
+
+iframe {
+  width: 80%;
+  margin-top: 5%;
+  height: 400px;
+}
+
+ngb-carousel {
+  width: 80%;
+  margin-top: 2%;
+}
+
+
+.picsum-img-wrapper {
+  justify-content: center;
+  display: flex;
+  background: black;
+}
+
+.picsum-img-wrapper img {
+  height: 450px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

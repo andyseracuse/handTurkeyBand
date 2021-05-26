@@ -1,1 +1,106 @@
-<p>navigation works!</p>
+<div id="nav-wrapper">
+  <div id="homepage-nav">
+    <div class="desktop-nav">
+      <img id="logo-text" [routerLink]="['/']" routerLinkActive="router-link-active"  src="../../assets/Images/logoText.jpg">
+      <a href="/media" class="homepage-nav-button">
+        <div class="homepage-nav-button">
+          <img src="../../assets/Images/rockTurkey.jpeg">
+          <p class="homepage-nav-text">Media</p>
+        </div>
+      </a>
+      <a href="/booking" class="homepage-nav-button">
+        <div class="homepage-nav-button">
+          <img src="../../assets/Images/fancyTurkey.jpeg">
+          <p class="homepage-nav-text">Booking</p>
+        </div>
+      </a>
+      <a href="/turkeys" class="homepage-nav-button">
+        <div class="homepage-nav-button">
+          <img src="../../assets/Images/singingTurkey.jpeg">
+          <p class="homepage-nav-text">The Turkeys</p>
+        </div>
+      </a>
+    </div>
+    <div class="mobile-nav">
+      <img id="mobile-logo-text" [routerLink]="['/']" routerLinkActive="router-link-active"  src="../../assets/Images/logoText.jpg">
+      <div id="menu-button" (click)="menuClick()">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="20"></rect>
+          <rect y="30" width="100" height="20"></rect>
+          <rect y="60" width="100" height="20"></rect>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="below-nav" [ngClass]="{expanded: expanded}">
+    <hr id="top-divider">
+    <a href="/media">
+      <div class="mobile-nav-button">
+        <img class="mobile-nav-image" src="../../assets/Images/rockTurkey.jpeg">
+        <p class="mobile-nav-text">Media</p>
+      </div>
+    </a>
+    <hr>
+    <a href="/booking">
+      <div class="mobile-nav-button" routerLinkActive="router-link-active" >
+        <img class="mobile-nav-image" src="../../assets/Images/fancyTurkey.jpeg">
+        <p class="mobile-nav-text">Booking</p>
+      </div>
+    </a>
+    <hr>
+    <a href="/turkeys">
+      <div class="mobile-nav-button">
+        <img class="mobile-nav-image" src="../../assets/Images/singingTurkey.jpeg">
+        <p class="mobile-nav-text">The Turkeys</p>
+      </div>
+    </a>
+  </div>
+  <div id="booking-button">
+    <button mat-raised-button color="primary" (click)="open(content)">Start your booking request now!</button>
+  </div>
+  <ng-template #content let-modal>
+    <form [formGroup]="form">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Booking Request</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <label for="date">Date (if dates are greyed out we are already booked)</label>
+            <div class="input-group">
+              <input formControlName="date" [readOnly]="true" id="date" class="form-control" placeholder="use date selector button to the right" name="dp" ngbDatepicker [minDate]="minDate" #dp="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+              </div>
+            </div>
+            <div class="form-error" *ngIf="form.get('date')?.hasError('required') && form.touched">please enter a valid date (try pressing the calendar button for available dates)</div>
+            <label for="location">Location</label>
+            <div class="input-group">
+              <input formControlName="location" id="location" class="form-control" placeholder="please enter address" name="location">
+            </div>
+            <div class="form-error" *ngIf="form.get('location')?.hasError('required') && form.touched">please enter a valid address</div>
+            <label for="email">Email</label>
+            <div class="input-group">
+              <input formControlName="email" id="email" class="form-control" placeholder="please enter an email" name="email">
+            </div>
+            <div class="form-error" *ngIf="form.get('email')?.hasError('required') && form.touched">please enter an email address</div>
+            <div class="form-error" *ngIf="form.get('email')?.hasError('email') && form.touched">please enter a valid email address</div>
+            <label for="phone">Phone Number (optional)</label>
+            <div class="input-group">
+              <input formControlName="phone" id="phone" class="form-control" placeholder="please enter your phone number" name="email">
+            </div>
+            <label for="requests">Special Requests (optional)</label>
+            <div class="input-group">
+              <input formControlName="specialRequests" id="requests" class="form-control" placeholder="(i.e. song requests, family friendly, etc.)" name="requests">
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="onSubmit()" [disabled]="form.invalid" type="submit">Submit</button>
+      </div>
+    </form>
+  </ng-template>  
+  <hr>
+</div>

@@ -1,0 +1,28 @@
+<div class="page-wrapper">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Videos</a>
+      <ng-template ngbNavContent>
+        <div class="media-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fhandturkeyband%2Fvideos%2F283446926737418%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Images</a>
+      <ng-template ngbNavContent>
+        <div class="carousel-wrapper">
+          <ngb-carousel>
+            <ng-template *ngFor="let image of images" ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="image" alt="Random first slide">
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="output"></div>
+</div>

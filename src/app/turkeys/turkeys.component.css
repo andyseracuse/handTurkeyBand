@@ -1,0 +1,83 @@
+.turkeys-wrapper{
+  position: absolute;
+  top: 152px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 830px) {
+  .turkeys-wrapper {
+    top: 195px;
+  }
+}
+
+.about-the-band {
+  width: 100%;
+  padding: 3% 15% 3% 25%;
+  background: gainsboro;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.internal-wrapper{
+  max-width: 600px;
+}
+
+.internal-wrapper p {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.internal-wrapper h1 {
+  font-size: 40px;
+}
+
+.avatar {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.bio {
+  align-items: left;
+  margin: 30px 0 30px 0;
+  padding-left: 5%;
+}
+
+.bio-body {
+  font-size: 20px;
+}
+
+.bio-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .avatar {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .bio {
+    padding-left: 0;;
+  }
+
+  .bio-text {
+    margin-top: 25px;
+    text-align: center;
+  }
+}

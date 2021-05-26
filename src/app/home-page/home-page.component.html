@@ -1,20 +1,20 @@
-<div id="homepage-background">
-  <div id="banner-cover-up"></div>
-  <div id="homepage-banner">
-    <img id="logo-text" src="../../assets/Images/logoText.jpg">
-    <div id="homepage-nav">
-      <div class="homepage-nav-button">
-        <img src="../../assets/Images/rockTurkey.jpg">
-        <p class="homepage-nav-text">Media</p>
-      </div>
-      <div class="homepage-nav-button">
-        <img src="../../assets/Images/fancyTurkey.jpg">
-        <p class="homepage-nav-text">Booking</p>
-      </div>
-      <div class="homepage-nav-button">
-        <img src="../../assets/Images/singingTurkey.png">
-        <p class="homepage-nav-text">The Turkeys</p>
-      </div>
+<video playsinline autoplay poster="../../assets/Images/homepageBackgroundImage.jpg" [muted]="true" loop id="homepage-background">
+  <source src="../../assets/videos/homepageBackgroundVideo.mp4" type="video/webm">
+</video>
+<div id="homepage-banner">
+  <img id="logo-text" src="../../assets/Images/logoText.jpg">
+  <div id="homepage-nav">
+    <div class="homepage-nav-button">
+      <img id="homepage-nav-button-img"src="../../assets/Images/rockTurkey.jpeg">
+      <p class="homepage-nav-text">Media</p>
+    </div>
+    <div class="homepage-nav-button"[routerLink]="['/booking']">
+      <img id="homepage-nav-button-img"src="../../assets/Images/fancyTurkey.jpeg">
+      <p class="homepage-nav-text" routerLinkActive="router-link-active" >Booking</p>
+    </div>
+    <div [routerLink]="['/turkeys']" class="homepage-nav-button">
+      <img id="homepage-nav-button-img"src="../../assets/Images/singingTurkey.jpeg">
+      <p class="homepage-nav-text">The Turkeys</p>
     </div>
   </div>
 </div>

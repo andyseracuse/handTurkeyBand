@@ -1,0 +1,148 @@
+#logo-text{
+  left: 0;
+  position: absolute;
+  height: 65%;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+#homepage-nav{
+  height: 100px;
+  padding: 0 0 0 17%;
+  display: flex;
+  background-color: black;
+}
+
+.homepage-nav-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  margin: 1% 0 2% 0;
+  height: 80px;
+}
+.homepage-nav-button { transition: all .2s ease-in-out; }
+.homepage-nav-button:hover { 
+  transform: scale(1.1); 
+  
+}
+.homepage-nav-text{
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+  cursor: pointer;
+}
+.homepage-nav-button img{
+  height: 70%;
+  filter: brightness(200%);
+  cursor: pointer;
+}
+.booking-button{
+  width: 70%;
+  margin: auto;
+}
+#booking-button button{
+  width: 100%;
+  height: 50px;
+  border-radius: 0;
+}
+#nav-wrapper{
+  position:fixed;
+  width: 100%;
+  z-index: 10;
+}
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=)!important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: 50%;
+}
+.desktop-nav{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.mobile-nav{
+  display:none;
+  width: 100%;
+  justify-content: space-between;
+}
+
+rect{
+  fill: white;
+}
+
+#menu-button{
+  margin: auto 20px auto 0;
+  cursor: pointer;
+}
+#booking-button button{
+  font-size: 20px !important;
+}
+@media only screen and (max-width: 830px) {
+  .desktop-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: flex;
+  }
+  #homepage-nav{
+    height: 13vh;
+    padding: 0;
+    z-index: 1;
+  }
+  #booking-button button{
+    height: 100px;
+    font-size: 25px !important;
+  }
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+.mobile-nav-button{
+  width: 100%;
+  display: flex;
+  height: 30.1%;
+  background: black;
+  padding: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+.below-nav{
+  height: 97vh;
+  display: none;
+}
+hr{
+  margin: 0;
+}
+.mobile-nav-text{
+  margin: auto;
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+}
+#top-divider{
+  height: 5px;
+}
+.expanded{
+  display: block;
+}
+
+hr {
+  border:1px solid white;
+}
+
+.mobile-nav-image {
+  height: 100px;
+}
+
+.form-error {
+  color: red;
+  font-size: small;
+  margin-bottom: 7px;
+
+}

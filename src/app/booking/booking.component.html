@@ -1,0 +1,73 @@
+<div class="page-wrapper">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Upcoming Shows</a>
+      <ng-template ngbNavContent>
+        <div class="event" *ngFor="let event of events">
+          <div class="left">
+            <div class="date">
+              <div class="day">
+                {{getDay(event.start.dateTime || event.start.date)}}
+              </div>
+              <div class="month">
+                {{getMonth(event.start.dateTime || event.start.date).substring(0,3)}}&nbsp;
+              </div>
+            </div>
+            <div class="info-container">
+              <div class="title">
+                {{event.summary.replace('public', '').replace('Public', '')}}
+              </div>
+              <div class="event-day-time">{{getDayOfWeek(event.start.dateTime) + ', ' + getTimes(event.start.dateTime) + ' – ' + getTimes(event.end.dateTime)}}</div>
+              <a href="{{'https://maps.google.com/?q=' + event.location}}" target=_blank>
+                <div class="event-location">{{event.location}}</div>
+              </a>
+            </div>
+          </div>
+          <div class="vl"></div>
+          <div class="description">{{event.description}}</div>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Repetroire</a>
+      <ng-template ngbNavContent>
+        <div class="container rep-container">
+          <div class="row">
+            <div class="col"><h2>Title</h2></div>
+            <div class="col"><h2>Artist</h2></div>
+          </div>
+          <hr>
+          <div class="row song" *ngFor="let song of rep">
+            <div class="col"><p>{{song.Title}}</p></div>
+            <div class="col"><p>{{song.Artist}}</p></div>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Booking Info</a>
+      <ng-template ngbNavContent>
+        <p class="booking-info">Currently, our rates are assesed on a case by case basis.  Please send us a request using the button above and we would be happy to discuss pricing</p>
+        <div class="container">
+          <h1 class="great-title">We're great at...</h1>
+          <div class="row great-wrapper">
+            <div class="col-xs-12 col-md-4 great-col">
+              <h1>Weddings</h1>
+              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+            </div>
+            <div class="col-xs-12 col-md-4 great-col">
+              <h1>Parties</h1>
+              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+            </div>
+            <div class="col-xs-12 col-md-4 great-col">
+              <h1>Baby Showers</h1>
+              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="output"></div>
+</div>

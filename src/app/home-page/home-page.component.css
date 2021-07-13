@@ -93,3 +93,12 @@
     height: 100%;
   }
 }
+@media only screen and (max-width: 1325px) and (min-width: 830px) {
+  #homepage-nav-button-img{
+    height: 50%;
+  }
+  #homepage-nav {
+    margin-bottom: -90px;
+    margin-top: 30px;
+  } 
+}

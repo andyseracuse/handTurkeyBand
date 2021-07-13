@@ -10,7 +10,7 @@ export class TurkeysComponent implements OnInit {
   constructor() { }
 
   public bandmates = [
-    {name: 'Andy Seracuse - Vocals', picturePath: '../../assets/Images/Andy.jpg', bio: 'Makes this website look oh so good. Yes that\'s why my... his name is first'},
+    {name: 'Andy Seracuse - Vocals', picturePath: '../../assets/Images/Andy.jpg', bio: 'Makes this website look oh so good. Yes that\'s why my... his name is first.'},
     {name: 'Kylee Lund - Vocals', picturePath: '../../assets/Images/Kylee.jpg', bio: 'Makes sure the average height of the band doesn\'t get out of hand.'},
     {name: 'Stephen Garrison - Bass', picturePath: '../../assets/Images/Stephen.jpg', bio: 'Plays the knock off Joe Dart Bass.'},
     {name: 'Nicky Podrez - Drums', picturePath: '../../assets/Images/Nicky.jpg', bio: 'Trying to distance himself from brass instruments.'},

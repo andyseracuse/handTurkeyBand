@@ -21,6 +21,10 @@ export class BookingComponent {
       "Artist": "Cory Wong"
     },
     {
+      "Title": "Dial Up",
+      "Artist": "Corey Wong"
+    },
+    {
       "Title": "Beastly",
       "Artist": "Vulfpeck"
     },
@@ -135,7 +139,11 @@ export class BookingComponent {
     {
       "Title": "24K Magic",
       "Artist": "Bruno Mars"
-    }
+    },
+    {
+      "Title": "Flesh and Bone",
+      "Artist": "Sammi Rae & the Friends"
+    },
   ];
 
   getMonth(dateString: string) {

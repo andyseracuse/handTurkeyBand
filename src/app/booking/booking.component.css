@@ -14,6 +14,10 @@
 
 .description{
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h2{
@@ -112,10 +116,13 @@ p{
 
 .great-image {
   width: 100%;
+  height: 269px;
+  object-fit: cover;
 }
 
 .great-col {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .info-container{
@@ -158,7 +165,7 @@ p{
     width: 100%;
   }
   .description {
-    width: 100%
+    width: 100%;
   }
   .divider {
     display: block

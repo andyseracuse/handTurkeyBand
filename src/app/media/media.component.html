@@ -3,8 +3,13 @@
     <li [ngbNavItem]="1">
       <a ngbNavLink>Videos</a>
       <ng-template ngbNavContent>
-        <div class="media-wrapper">
-          <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fhandturkeyband%2Fvideos%2F283446926737418%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <div class="media-wrapper-wrapper">
+          <div class="media-wrapper">
+            <iframe src="https://player.vimeo.com/video/560717697?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="media-wrapper">
+            <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fhandturkeyband%2Fvideos%2F283446926737418%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div>
         </div>
       </ng-template>
     </li>

@@ -24,12 +24,14 @@
             </div>
           </div>
           <div class="vl"></div>
-          <div class="description">{{event.description}}</div>
+          <div class="description">
+            <p>{{event.description ? event.description: "You've seen concerts before, right? It'll be like that 😀"}}</p>
+          </div>
         </div>
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
-      <a ngbNavLink>Repetroire</a>
+      <a ngbNavLink>Repertoire</a>
       <ng-template ngbNavContent>
         <div class="container rep-container">
           <div class="row">
@@ -53,15 +55,15 @@
           <div class="row great-wrapper">
             <div class="col-xs-12 col-md-4 great-col">
               <h1>Weddings</h1>
-              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+              <img class="great-image" src="../../assets/Images/wedding.jpg" alt="">
             </div>
             <div class="col-xs-12 col-md-4 great-col">
               <h1>Parties</h1>
-              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+              <img class="great-image" src="../../assets/Images/parties.jpg" alt="">
             </div>
             <div class="col-xs-12 col-md-4 great-col">
               <h1>Baby Showers</h1>
-              <img class="great-image" src="../../assets/Images/Ben.jpg" alt="">
+              <img class="great-image" src="../../assets/Images/babys.jpg" alt="">
             </div>
           </div>
         </div>

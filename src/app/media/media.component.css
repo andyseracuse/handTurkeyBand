@@ -11,6 +11,12 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 830px) {
+  .page-wrapper {
+    top: 200px
+  }
+}
+
 .nav-item{
   width: 50%;
   text-align: center;
@@ -27,10 +33,27 @@
   width: 100%;
 }
 
+.media-wrapper {
+  max-width: 1300px;
+}
+
+.media-wrapper-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 iframe {
   width: 80%;
-  margin-top: 5%;
+  margin-top: 10px;
   height: 70vh;
+}
+
+@media only screen and (max-width: 830px) {
+  iframe {
+    height: 30vh;
+  }
 }
 
 ngb-carousel {
@@ -46,7 +69,13 @@ ngb-carousel {
 }
 
 .picsum-img-wrapper img {
-  height: 450px;
+  height: 70vh;
+}
+
+@media only screen and (max-width: 800px) {
+  .picsum-img-wrapper img {
+    height: 450px;
+  }
 }
 
 .carousel-wrapper {

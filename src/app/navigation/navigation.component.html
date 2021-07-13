@@ -4,19 +4,19 @@
       <img id="logo-text" [routerLink]="['/']" routerLinkActive="router-link-active"  src="../../assets/Images/logoText.jpg">
       <a href="/media" class="homepage-nav-button">
         <div class="homepage-nav-button">
-          <img src="../../assets/Images/rockTurkey.jpeg">
+          <img id="homepage-nav-button-img" src="../../assets/Images/rockTurkey.jpeg">
           <p class="homepage-nav-text">Media</p>
         </div>
       </a>
       <a href="/booking" class="homepage-nav-button">
         <div class="homepage-nav-button">
-          <img src="../../assets/Images/fancyTurkey.jpeg">
+          <img id="homepage-nav-button-img" src="../../assets/Images/fancyTurkey.jpeg">
           <p class="homepage-nav-text">Booking</p>
         </div>
       </a>
       <a href="/turkeys" class="homepage-nav-button">
         <div class="homepage-nav-button">
-          <img src="../../assets/Images/singingTurkey.jpeg">
+          <img id="homepage-nav-button-img" src="../../assets/Images/singingTurkey.jpeg">
           <p class="homepage-nav-text">The Turkeys</p>
         </div>
       </a>
@@ -51,9 +51,11 @@
     <a href="/turkeys">
       <div class="mobile-nav-button">
         <img class="mobile-nav-image" src="../../assets/Images/singingTurkey.jpeg">
-        <p class="mobile-nav-text">The Turkeys</p>
+        <p class="mobile-nav-text">Turkeys</p>
       </div>
     </a>
+    <div class="safari-buffer">
+    </div>
   </div>
   <div id="booking-button">
     <button mat-raised-button color="primary" (click)="open(content)">Start your booking request now!</button>
@@ -70,7 +72,7 @@
           <div class="form-group">
             <label for="date">Date (if dates are greyed out we are already booked)</label>
             <div class="input-group">
-              <input formControlName="date" [readOnly]="true" id="date" class="form-control" placeholder="use date selector button to the right" name="dp" ngbDatepicker [minDate]="minDate" #dp="ngbDatepicker">
+              <input formControlName="date" [readOnly]="true" id="date" class="form-control" placeholder="use date selector button to the right" name="dp" ngbDatepicker [minDate]="minDate" #dp="ngbDatepicker" [markDisabled]="isDisabled">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
               </div>

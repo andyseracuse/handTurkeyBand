@@ -6,7 +6,7 @@ import { MediaComponent } from './media/media.component';
 import { TurkeysComponent } from './turkeys/turkeys.component';
 
 const routes: Routes = [
-  {path:"booking", component: BookingComponent},
+  {path:"shows", component: BookingComponent},
   {path: "turkeys", component: TurkeysComponent},
   {path: "media", component: MediaComponent},
   {path: "", component: HomePageComponent, pathMatch: 'full'}

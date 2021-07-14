@@ -127,6 +127,9 @@ p{
 
 .info-container{
   padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav-item{

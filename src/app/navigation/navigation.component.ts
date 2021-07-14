@@ -45,15 +45,15 @@ export class NavigationComponent {
       if (date.equals(new NgbDate(elDate.getFullYear(), elDate.getMonth() + 1, elDate.getDate()))) {
         booked = true
       }
-    })
-    
+    });
+
     if (booked === false) {
       return false
     } else {
       return true
     }
   }
-  
+
   public minDate = {
     year: new Date().getFullYear(),
     month: new Date().getMonth() + 1,

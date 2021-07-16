@@ -176,7 +176,6 @@ export class BookingComponent {
   async ngOnInit(){
     await this.getEvents()
     .subscribe(res => {
-      debugger
       const items = res.items;
       this.events = items.sort((a, b) =>  new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime());
     });

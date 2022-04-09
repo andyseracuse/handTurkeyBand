@@ -3,29 +3,34 @@
     <li [ngbNavItem]="1">
       <a ngbNavLink>Upcoming Shows</a>
       <ng-template ngbNavContent>
-        <div class="event" *ngFor="let event of events">
-          <div class="left">
-            <div class="date">
-              <div class="day">
-                {{getDay(event.start.dateTime || event.start.date)}}
+        <div *ngIf="!events.length">
+          Unfortunately there are no shows scheduled right now.  You can change that by reaching out with the booking button above!
+        </div>
+        <div *ngIf="events.length">
+          <div  class="event" *ngFor="let event of events">
+            <div class="left">
+              <div class="date">
+                <div class="day">
+                  {{getDay(event.start.dateTime || event.start.date)}}
+                </div>
+                <div class="month">
+                  {{getMonth(event.start.dateTime || event.start.date).substring(0,3)}}&nbsp;
+                </div>
               </div>
-              <div class="month">
-                {{getMonth(event.start.dateTime || event.start.date).substring(0,3)}}&nbsp;
+              <div class="info-container">
+                <div class="title">
+                  {{event.summary.replace('public', '').replace('Public', '')}}
+                </div>
+                <div class="event-day-time">{{getDayOfWeek(event.start.dateTime) + ', ' + getTimes(event.start.dateTime) + ' – ' + getTimes(event.end.dateTime)}}</div>
+                <a href="{{'https://maps.google.com/?q=' + event.location}}" target=_blank>
+                  <div class="event-location">{{event.location}}</div>
+                </a>
               </div>
             </div>
-            <div class="info-container">
-              <div class="title">
-                {{event.summary.replace('public', '').replace('Public', '')}}
-              </div>
-              <div class="event-day-time">{{getDayOfWeek(event.start.dateTime) + ', ' + getTimes(event.start.dateTime) + ' – ' + getTimes(event.end.dateTime)}}</div>
-              <a href="{{'https://maps.google.com/?q=' + event.location}}" target=_blank>
-                <div class="event-location">{{event.location}}</div>
-              </a>
+            <div class="vl"></div>
+            <div class="description">
+              <p>{{event.description ? event.description: "You've seen concerts before, right? It'll be like that 😀"}}</p>
             </div>
-          </div>
-          <div class="vl"></div>
-          <div class="description">
-            <p>{{event.description ? event.description: "You've seen concerts before, right? It'll be like that 😀"}}</p>
           </div>
         </div>
       </ng-template>

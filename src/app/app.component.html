@@ -1,2 +1,4 @@
-<app-navigation *ngIf="router.url !=='/'"></app-navigation>
+<app-navigation *ngIf=" ['/shows', '/turkeys', '/media'].includes(router.url)"></app-navigation>
 <router-outlet></router-outlet>
+<div><img href="../assets/Images/spotify-logo.png"></div>
+<a href="https://open.spotify.com/artist/0yeXPXaEV9lKMi6GE3nRcH"><div class="footer mat-button mat-focus-indicator" *ngIf=" ['/shows', '/turkeys', '/media'].includes(router.url)">New Music!</div></a>

@@ -1,3 +1,27 @@
+.spotify-link{
+  background-color: #1ed760;
+}
+
+.apple-link {
+  background-color: #fa2c4f;
+}
+
+.music-link {
+  height:50px;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px white solid;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 7%;
+}
+
 #homepage-background{
   object-fit: cover;
   width: 100vw;
@@ -34,6 +58,9 @@
   margin-bottom: 5%;
   animation: navFadeIn 2s;
 }
+#music-link-wrapper {
+  margin: 0 20% 0 20%;
+}
 #homepage-nav{
   height: 25%;
   border-radius: 10px;
@@ -61,6 +88,10 @@
 }
 .homepage-nav-button { transition: all .2s ease-in-out; }
 .homepage-nav-button:hover { transform: scale(1.2); }
+.music-link { transition: all .2s ease-in-out; }
+.music-link:hover { transform: scale(1.1); }
+.music-link{animation: navFadeIn 2.75s;}
+
 .homepage-nav-text{
   color: white;
   text-align: center;
@@ -92,6 +123,15 @@
   #homepage-nav-button-img{
     height: 100%;
   }
+
+  .music-link{
+    margin: -7% auto 0 auto;
+    width: 77%;
+  }
+
+  .music-link p {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1325px) and (min-width: 830px) {
   #homepage-nav-button-img{
@@ -108,3 +148,27 @@
     font-size: 1.2rem;
   }
 }
+
+
+
+a {
+  width: 50%;
+  margin: 0 auto 0 auto;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.music-link p{
+  margin: 12px;
+}
+
+.spotify-logo{
+  height: 30px;
+}
+.music-link:hover {
+  filter: brightness(.85);
+  text-decoration: none;
+}
+

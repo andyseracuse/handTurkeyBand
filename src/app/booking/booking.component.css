@@ -167,6 +167,7 @@ p{
 @media only screen and (min-width: 576px){
   .rep-container {
     margin-top: 5%;
+    margin-bottom: 10%;
   }
 }
 
@@ -192,4 +193,8 @@ p{
   .event {
     margin-bottom: 50px;
   }
+}
+
+.output.tab-content{
+  margin-bottom: 80px;
 }

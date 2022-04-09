@@ -39,7 +39,12 @@ export class NavigationComponent {
 
   public isBooked(date: NgbDate): boolean {
     let booked = false;
-    const filteredEvents = this.events.filter(event => !event.summary.toLowerCase().includes('rehearsal'))
+    const filteredEvents = this.events.filter(event => {
+      if(event.summary) {
+        return !event.summary.toLowerCase().includes('rehearsal')
+      }
+      return false
+    })
     filteredEvents.forEach((el) => {
       const elDate = new Date(el.start.dateTime)
       if (date.equals(new NgbDate(elDate.getFullYear(), elDate.getMonth() + 1, elDate.getDate()))) {
